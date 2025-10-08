@@ -22,5 +22,6 @@
 
 ## 5. Platform Operations
 - **Unified Ingestion Bus**: Streams structured/unstructured data into a governed lakehouse with encryption-at-rest and in-flight protection.
+- **Operational Datastore**: Managed PostgreSQL with JSONB documents for encounters, claim drafts, and consent artefacts, powering transactional flows before they land in the lakehouse.
 - **MLOps & Quality**: Provides model lifecycle tooling, drift detection, human-in-the-loop review, and bias dashboards.
 - **Provider & Payer Experiences**: Offers clinician consoles for encounter review, payer portals for adjudication visibility, and analytics dashboards for VBC performance.

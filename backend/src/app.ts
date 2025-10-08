@@ -32,7 +32,7 @@ app.use((err: Error, _req: express.Request, res: express.Response, _next: expres
     console.error(err);
   }
 
-  res.status(500).json({ message: 'Unexpected error occurred' });
+  res.status(500).json({ message: err.message || 'Unexpected error occurred' });
 });
 
 export { app };

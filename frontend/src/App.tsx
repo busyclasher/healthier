@@ -1,19 +1,20 @@
-import { Footer } from './components/Footer';
-import { Header } from './components/Header';
-import { FeatureSection } from './components/FeatureSection';
-import { featureSections } from './data/featureSections';
+import { Route, Routes } from 'react-router-dom';
+
+import { AppLayout } from './components/AppLayout';
+import { LandingPage } from './routes/LandingPage';
+import { PayerWorkspace } from './routes/PayerWorkspace';
+import { ProviderWorkspace } from './routes/ProviderWorkspace';
 
 function App() {
   return (
-    <div className="app-shell">
-      <Header />
-      <div className="grid">
-        {featureSections.map((section) => (
-          <FeatureSection key={section.id} section={section} />
-        ))}
-      </div>
-      <Footer />
-    </div>
+    <AppLayout>
+      <Routes>
+        <Route path="/" element={<LandingPage />} />
+        <Route path="/provider" element={<ProviderWorkspace />} />
+        <Route path="/payer" element={<PayerWorkspace />} />
+        <Route path="*" element={<LandingPage />} />
+      </Routes>
+    </AppLayout>
   );
 }
 
